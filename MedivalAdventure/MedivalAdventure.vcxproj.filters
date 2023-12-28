@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{923fc4f5-d145-4a90-897d-7f1b7b14ebda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Engine">
+      <UniqueIdentifier>{c8244d6b-2a5b-4be1-8e78-d9ac0e4b6f80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes">
+      <UniqueIdentifier>{df719cf1-e3a8-4e79-8b09-f436c28dda40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Utils">
+      <UniqueIdentifier>{275f3133-e830-4f05-8496-0854cdde78be}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>src\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="btn.cpp">
+      <Filter>src\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>src\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticImage.cpp">
+      <Filter>src\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldMap.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="PopUpMenu.cpp">
+      <Filter>src\Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>src\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="btn.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>src\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticImage.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Music.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldMap.h">
+      <Filter>src\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="PopUpMenu.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
