@@ -49,11 +49,12 @@ Game::Game(int Width, int height, String name, bool fullscreen)
 	//create window
 	if (fullscreen)
 	{
-		hwnd = new RenderWindow(VideoMode(height, Width), "Medival adventure", Style::Fullscreen);
+		hwnd = new RenderWindow(VideoMode(height, Width), name, Style::Fullscreen);
 	}
 	else
 	{
 		hwnd = new RenderWindow(VideoMode(height, Width), name);
 	}
 	hwnd->setFramerateLimit(120);
+
 }

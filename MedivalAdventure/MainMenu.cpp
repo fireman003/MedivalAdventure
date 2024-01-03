@@ -1,4 +1,4 @@
-#include "MainMenu.h"
+﻿#include "MainMenu.h"
 
 MainMenu::MainMenu(sf::RenderWindow *hwnd)
 {
@@ -11,10 +11,7 @@ MainMenu::MainMenu(sf::RenderWindow *hwnd)
 
 	//options
 	StaticImage BgOptions(Vector2f(1920/2 - 1125/2, 1080/2 - 750/2), "assets/backroundOptions.jpg");
-	btn ExitOption(Vector2f(1920 / 2 + 1125 / 2 - 80, 1080 / 2 + 750 / 2 - 40), Color::Red, "Close", Color::White, 25, 1);
-	//PopUpMenu WindowMod(Vector2f(380, 380), 25, Color::Black, Color::White, Color::White, "True*False", Color::Red, 1, "");
-	//PopUpMenu volume();
-	//PopUpMenu MaxFPS();
+	btn CloseOptions(Vector2f(1920 / 2 + 1125 / 2 - 100, 1080 / 2 + 750 / 2 - 40), Color::Red, "Close", Color::White, 25, 1);
 
 
 	music.Play();
@@ -53,8 +50,7 @@ MainMenu::MainMenu(sf::RenderWindow *hwnd)
 			{
 				ShowOptions = true;
 			}
-			if (ExitOption.checkHover())
-			{
+			if (CloseOptions.checkHover()) {
 				ShowOptions = true;
 			}
 		}
@@ -66,9 +62,9 @@ MainMenu::MainMenu(sf::RenderWindow *hwnd)
 			Play.buttonDraw(hwnd, ShowOptions);
 			Options.buttonDraw(hwnd, ShowOptions);
 			Exit.buttonDraw(hwnd, ShowOptions);
-			ExitOption.buttonDraw(hwnd, !ShowOptions);
-			//WindowMod.PopDraw(hwnd, !ShowOptions, false);
+			CloseOptions.buttonDraw(hwnd, !ShowOptions);
 
+			//WindowMod.PopDraw(hwnd, !ShowOptions, false);
 			hwnd->display();
 		
 	}

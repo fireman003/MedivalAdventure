@@ -129,7 +129,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Marek\source\repos\MedivalAdventure\extern\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics.lib;sfml-audio.lib;sfml-system.lib;sfml-main.lib;sfml-network.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-audio.lib;sfml-system.lib;sfml-main.lib;sfml-network.lib;sfml-window.lib;tgui.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -137,7 +137,6 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
-    <ClCompile Include="PopUpMenu.cpp" />
     <ClCompile Include="StaticImage.cpp" />
     <ClCompile Include="Utils.cpp" />
     <ClCompile Include="WorldMap.cpp" />
@@ -147,7 +146,6 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Music.h" />
-    <ClInclude Include="PopUpMenu.h" />
     <ClInclude Include="StaticImage.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="WorldMap.h" />

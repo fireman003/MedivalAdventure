@@ -1,6 +1,7 @@
 #pragma once
 
-#include <SFML/Graphics.hpp>
+#include <TGUI/TGUI.hpp>
+#include <TGUI/Backend/SFML-Graphics.hpp>
 #include <iostream>
 #include "MainMenu.h"
 #include "WorldMap.h"
@@ -12,7 +13,7 @@ class Game
 private:
 	RenderWindow *hwnd;
 	int Scene = 0;
-	
+	tgui::Gui *gui;
 
 	int StartingScreen();
 	void loadScreen(int x);
@@ -44,6 +45,7 @@ public:
 
 	~Game() {
 		delete hwnd;
+		delete gui;
 	}
 protected:
 };
