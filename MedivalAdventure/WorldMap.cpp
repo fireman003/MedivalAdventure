@@ -6,7 +6,8 @@ WorldMap::WorldMap(RenderWindow* hwnd)
 	MusicPlay music(50, "assets/worldmapsong.wav", true);
 	StaticImage coin(Vector2f(1860, 50), "assets/coin.png");
 	Font font; font.loadFromFile("assets/ModernAntiqua-Zw5K.ttf");
-	btn CoinText(Vector2f(1800, 50), Color::White, "test", Color::White, 25, 1);
+	btn CoinText(Vector2f(1800, 55), Color::White, "test", Color::White, 25, 1);
+	ChainInit();
 
 	Event ev;
 	music.Play();

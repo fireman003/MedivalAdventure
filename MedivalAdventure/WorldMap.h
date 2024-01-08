@@ -35,6 +35,6 @@ private:
 
 	std::vector<StaticImage> chains;
 
-	std::vector<Vector2f> chainPos = {Vector2f(1550, 360), Vector2f(1510, 980) , Vector2f(940, 530) , Vector2f(907, 917)};
+	std::vector<Vector2f> chainPos = {Vector2f(340, 350), Vector2f(390, 775) , Vector2f(942, 510) , Vector2f(1575, 900)};
 };
 
