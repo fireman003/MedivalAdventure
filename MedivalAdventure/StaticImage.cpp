@@ -8,7 +8,7 @@ StaticImage::StaticImage(Vector2f Pos, String path)
 	sprite.setPosition(Pos);
 }
 
-void StaticImage::Drawing(RenderWindow *hwnd,bool Show)
+void StaticImage::Drawing(RenderWindow* hwnd, bool Show)
 {
 	if (Show) {
 		hwnd->draw(sprite);
@@ -24,4 +24,3 @@ void StaticImage::changePosition(Vector2f Pos)
 {
 	sprite.setPosition(Pos);
 }
-

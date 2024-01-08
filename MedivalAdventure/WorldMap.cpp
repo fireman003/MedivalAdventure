@@ -4,8 +4,9 @@ WorldMap::WorldMap(RenderWindow* hwnd)
 {
 	StaticImage background(Vector2f(0, 0), "assets/worldmap.jpg");
 	MusicPlay music(50, "assets/worldmapsong.wav", true);
-	StaticImage coin(Vector2f(1860, 50), "assets/coin");
-	btn CoinText(Vector2f(1800, 50), );
+	StaticImage coin(Vector2f(1860, 50), "assets/coin.png");
+	Font font; font.loadFromFile("assets/ModernAntiqua-Zw5K.ttf");
+	btn CoinText(Vector2f(1800, 50), Color::White, "test", Color::White, 25, 1);
 
 	Event ev;
 	music.Play();
@@ -21,7 +22,10 @@ WorldMap::WorldMap(RenderWindow* hwnd)
 		
 		if (shop)
 		{
-
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+			{
+				shop = false;
+			}
 		}
 		else {
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
@@ -39,10 +43,13 @@ WorldMap::WorldMap(RenderWindow* hwnd)
 		hwnd->clear(Color::Black);
 		background.Drawing(hwnd, true);
 
+		coin.Drawing(hwnd, !shop);
+		CoinText.buttonDraw(hwnd, !shop);
 		for (auto i : chains)
 		{
-			i.Drawing(hwnd, true);
+			i.Drawing(hwnd, !shop);
 		}
+
 
 
 		hwnd->display();

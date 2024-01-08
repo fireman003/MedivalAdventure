@@ -6,7 +6,6 @@
 #include "StaticImage.h"
 #include "btn.h"
 #include "Music.h"
-#include "SelectMenu.h"
 
 using namespace sf;
 
