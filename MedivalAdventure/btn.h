@@ -9,7 +9,7 @@ using namespace sf;
 class btn
 {
 public:
-	btn(Vector2f Position, Color fillColor, String Txt, Color HoverColor, unsigned int FontSize, int font)
+	btn(Vector2f Position, Color fillColor, String Txt, Color HoverColor, unsigned int FontSize, Font font)
 	{
 		text.setString(Txt);
 		text.setFillColor(HoverColor);
@@ -17,14 +17,7 @@ public:
 		text.setPosition(Position);
 		text.setCharacterSize(FontSize);
 		FillColor = fillColor;
-		switch (font)
-		{
-		case 1:
-			fon.loadFromFile("assets/ModernAntiqua-Zw5K.ttf");
-			break;
-			
-		}
-		text.setFont(fon);
+		text.setFont(font);
 	}
 
 	
@@ -56,17 +49,13 @@ public:
 		return false;
 	}
 
-	float Bounderies(bool down) {
-		if (down) {
-			return text.getGlobalBounds().width;
-		}
-		return text.getGlobalBounds().height;
+	void SetText(String txt) {
+		text.setString(txt);
 	}
 
 private:
 	Text text;
 	Color FillColor;
-	Font fon;
 	Color HOverColor;
 	
 };

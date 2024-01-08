@@ -1,18 +1,23 @@
 ﻿#include "MainMenu.h"
 
+
 MainMenu::MainMenu(sf::RenderWindow *hwnd)
 {
+	if (!font.loadFromFile("assets/ModernAntiqua-Zw5K.ttf")) {
+		std::cout << "Error" << std::endl;
+	}
+
 	//basic menu
 	StaticImage background(Vector2f(0, 0), "assets/background.jpg");
-	btn Play(Vector2f(640, 380), Color::Red, "Play", Color::White, 25, 1);
-	btn Options(Vector2f(640, 460), Color::Red, "Options", Color::White, 25, 1);
-	btn Exit(Vector2f(640, 540), Color::Red, "Exit", Color::White, 25, 1);
+	btn Play(Vector2f(640, 380), Color::Red, "Play", Color::White, 25, font);
+	btn Options(Vector2f(640, 460), Color::Red, "Options", Color::White, 25, font);
+	btn Exit(Vector2f(640, 540), Color::Red, "Exit", Color::White, 25, font);
 	MusicPlay music(50, "assets/ClaimYourWeapon.wav", true);
 
 	//options
 	StaticImage BgOptions(Vector2f(1920/2 - 1125/2, 1080/2 - 750/2), "assets/backroundOptions.jpg");
-	btn CloseOptions(Vector2f(1920 / 2 + 1125 / 2 - 100, 1080 / 2 + 750 / 2 - 40), Color::Red, "Close", Color::White, 25, 1);
-
+	btn CloseOptions(Vector2f(1920 / 2 + 1125 / 2 - 100, 1080 / 2 + 750 / 2 - 40), Color::Red, "Close", Color::White, 25, font);
+	//SelectMenu SoundVolume(Color::Red, Color::White, VolumeItems, Vector2f(1920 / 2 - 1125 / 2 + 120, 1080 / 2 - 750 / 2 + 120), 25, font, 20);
 
 	music.Play();
 	Event ev;	
@@ -63,8 +68,7 @@ MainMenu::MainMenu(sf::RenderWindow *hwnd)
 			Options.buttonDraw(hwnd, ShowOptions);
 			Exit.buttonDraw(hwnd, ShowOptions);
 			CloseOptions.buttonDraw(hwnd, !ShowOptions);
-
-			//WindowMod.PopDraw(hwnd, !ShowOptions, false);
+			//SoundVolume.DrawMenu(hwnd, !ShowOptions);
 			hwnd->display();
 		
 	}

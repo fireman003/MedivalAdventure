@@ -36,6 +36,7 @@
     <ClCompile Include="WorldMap.cpp">
       <Filter>src\scenes</Filter>
     </ClCompile>
+    <ClCompile Include="SelectMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -59,5 +60,6 @@
     <ClInclude Include="WorldMap.h">
       <Filter>src\scenes</Filter>
     </ClInclude>
+    <ClInclude Include="SelectMenu.h" />
   </ItemGroup>
 </Project>

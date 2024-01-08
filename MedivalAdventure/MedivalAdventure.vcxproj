@@ -137,6 +137,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="SelectMenu.cpp" />
     <ClCompile Include="StaticImage.cpp" />
     <ClCompile Include="Utils.cpp" />
     <ClCompile Include="WorldMap.cpp" />
@@ -146,6 +147,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Music.h" />
+    <ClInclude Include="SelectMenu.h" />
     <ClInclude Include="StaticImage.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="WorldMap.h" />
