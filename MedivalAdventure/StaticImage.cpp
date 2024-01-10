@@ -6,6 +6,8 @@ StaticImage::StaticImage(Vector2f Pos, String path)
 
 	sprite.setTexture(texture);
 	sprite.setPosition(Pos);
+	Arrow.loadFromSystem(Cursor::Arrow);
+	Hand.loadFromSystem(Cursor::Hand);
 }
 
 void StaticImage::Drawing(RenderWindow* hwnd, bool Show)

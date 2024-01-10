@@ -56,6 +56,11 @@ public:
 		return false;
 	}
 
+	void SetString(String txeet)
+	{
+		text.setString(txeet);
+	}
+
 	float Bounderies(bool down) {
 		if (down) {
 			return text.getGlobalBounds().width;

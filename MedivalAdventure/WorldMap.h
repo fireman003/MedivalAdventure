@@ -3,6 +3,8 @@
 #include <SFML/Graphics.hpp>
 
 #include <vector>
+#include<windows.h>           // for windows
+#include <iostream>
 
 #include "Music.h"
 #include "btn.h"

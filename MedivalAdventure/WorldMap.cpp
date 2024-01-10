@@ -1,4 +1,4 @@
-#include "WorldMap.h"
+﻿#include "WorldMap.h"
 
 WorldMap::WorldMap(RenderWindow* hwnd)
 {
@@ -6,8 +6,13 @@ WorldMap::WorldMap(RenderWindow* hwnd)
 	MusicPlay music(50, "assets/worldmapsong.wav", true);
 	StaticImage coin(Vector2f(1860, 50), "assets/coin.png");
 	Font font; font.loadFromFile("assets/ModernAntiqua-Zw5K.ttf");
-	btn CoinText(Vector2f(1800, 55), Color::White, "test", Color::White, 25, 1);
+	btn CoinText(Vector2f(1800, 55), Color::White, std::to_string(money), Color::White, 25, 1);
+	StaticImage ShopIcon(Vector2f(1760, 920), "assets/shop.png");
+	StaticImage ShopBackround(Vector2f(1920 / 2 - 450, 1080 / 2 - 250), "assets/ShopBackground.png");
+	btn CloseShop(Vector2f(1920 / 2 + 410, 1080 / 2 + 220), Color::White, "Close", Color::Red, 25, 1);
+
 	ChainInit();
+
 
 	Event ev;
 	music.Play();
@@ -26,6 +31,7 @@ WorldMap::WorldMap(RenderWindow* hwnd)
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 			{
 				shop = false;
+				Sleep(200);
 			}
 		}
 		else {
@@ -34,9 +40,9 @@ WorldMap::WorldMap(RenderWindow* hwnd)
 				change = false;
 				Scene = 1;
 			}
-			if (true)
+			else if (ShopIcon.Click(hwnd))
 			{
-
+				shop = true;
 			}
 		}
 
@@ -50,8 +56,9 @@ WorldMap::WorldMap(RenderWindow* hwnd)
 		{
 			i.Drawing(hwnd, !shop);
 		}
+		ShopIcon.Drawing(hwnd, !shop);
 
-
+		ShopBackround.Drawing(hwnd, shop);
 
 		hwnd->display();
 	}
