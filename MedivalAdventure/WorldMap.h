@@ -27,9 +27,9 @@ private:
 	bool shop = false;
 
 	void ChainInit() {
-		for (auto i : chainPos)
+		for (int i = 0; i < chains.size(); i++)
 		{
-			chains.push_back(StaticImage(i,"assets/chain.png"));
+			chains.push_back(StaticImage(chainPos.at(i), "assets/chain.png"));
 		}
 	};
 

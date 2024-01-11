@@ -52,9 +52,9 @@ WorldMap::WorldMap(RenderWindow* hwnd)
 
 		coin.Drawing(hwnd, !shop);
 		CoinText.buttonDraw(hwnd, !shop);
-		for (auto i : chains)
+		for (auto i = 0; i < chains.size(); i++)
 		{
-			i.Drawing(hwnd, !shop);
+			chains.at(i).Drawing(hwnd, !shop);
 		}
 		ShopIcon.Drawing(hwnd, !shop);
 

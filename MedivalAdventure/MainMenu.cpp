@@ -3,9 +3,6 @@
 
 MainMenu::MainMenu(sf::RenderWindow *hwnd)
 {
-	if (!font.loadFromFile("assets/ModernAntiqua-Zw5K.ttf")) {
-		std::cout << "Error" << std::endl;
-	}
 
 	//basic menu
 	StaticImage background(Vector2f(0, 0), "assets/background.jpg");
@@ -13,6 +10,7 @@ MainMenu::MainMenu(sf::RenderWindow *hwnd)
 	btn Options(Vector2f(640, 460), Color::Red, "Options", Color::White, 25, 1);
 	btn Exit(Vector2f(640, 540), Color::Red, "Exit", Color::White, 25, 1);
 	MusicPlay music(50, "assets/ClaimYourWeapon.wav", true);
+	
 
 	//options
 	StaticImage BgOptions(Vector2f(1920/2 - 1125/2, 1080/2 - 750/2), "assets/backroundOptions.jpg");

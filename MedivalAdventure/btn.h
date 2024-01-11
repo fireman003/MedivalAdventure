@@ -25,6 +25,8 @@ public:
 
 		}
 		text.setFont(fon);
+
+
 	}
 
 

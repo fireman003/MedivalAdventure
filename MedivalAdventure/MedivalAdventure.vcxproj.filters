@@ -13,6 +13,9 @@
     <Filter Include="src\Utils">
       <UniqueIdentifier>{275f3133-e830-4f05-8496-0854cdde78be}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\GamePlay">
+      <UniqueIdentifier>{926de69f-cc32-4ffe-879b-e033d4cf485d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,7 +39,9 @@
     <ClCompile Include="StaticImage.cpp">
       <Filter>src\Utils</Filter>
     </ClCompile>
-    <ClCompile Include="LoadData.cpp" />
+    <ClCompile Include="LoadData.cpp">
+      <Filter>src\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -60,6 +65,8 @@
     <ClInclude Include="WorldMap.h">
       <Filter>src\scenes</Filter>
     </ClInclude>
-    <ClInclude Include="LoadData.h" />
+    <ClInclude Include="LoadData.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
