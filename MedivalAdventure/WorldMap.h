@@ -9,6 +9,7 @@
 #include "Music.h"
 #include "btn.h"
 #include "StaticImage.h"
+#include "LoadData.h"
 
 using namespace sf;
 
@@ -25,18 +26,14 @@ private:
 	int Scene = 1;
 	bool change = true;
 	bool shop = false;
-
-	void ChainInit() {
-		for (int i = 0; i < chains.size(); i++)
-		{
-			chains.push_back(StaticImage(chainPos.at(i), "assets/chain.png"));
-		}
-	};
+	vector<double> MyData;
 
 	int money = 100;
 
-	std::vector<StaticImage> chains;
+	
 
-	std::vector<Vector2f> chainPos = {Vector2f(340, 350), Vector2f(390, 775) , Vector2f(942, 510) , Vector2f(1575, 900)};
+	//std::vector<StaticImage> chains = { StaticImage(Vector2f(340, 350), "assets/cchain.png"), StaticImage(Vector2f(390, 775), "assets/cchain.png"), StaticImage(Vector2f(942, 510), "assets/cchain.png"), StaticImage(Vector2f(1575, 900), "assets/cchain.png") };
+
+	//std::vector<Vector2f> chainPos = {Vector2f(340, 350), Vector2f(390, 775) , Vector2f(942, 510) , Vector2f(1575, 900)};
 };
 

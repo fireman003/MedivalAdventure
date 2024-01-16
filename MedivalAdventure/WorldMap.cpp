@@ -10,8 +10,16 @@ WorldMap::WorldMap(RenderWindow* hwnd)
 	StaticImage ShopIcon(Vector2f(1760, 920), "assets/shop.png");
 	StaticImage ShopBackround(Vector2f(1920 / 2 - 450, 1080 / 2 - 250), "assets/ShopBackground.png");
 	btn CloseShop(Vector2f(1920 / 2 + 410, 1080 / 2 + 220), Color::White, "Close", Color::Red, 25, 1);
+	StaticImage UiBar(Vector2f(), "assets/UIdata.png");
 
-	ChainInit();
+	StaticImage ch1(Vector2f(340, 350), "assets/cchain.png");
+	StaticImage ch2(Vector2f(390, 775), "assets/cchain.png");
+	StaticImage ch3(Vector2f(942, 510), "assets/cchain.png");
+	StaticImage ch4(Vector2f(1575, 900), "assets/cchain.png");
+
+	LoadData data;
+
+	MyData = data.readNumbersFromFile("assets/data.txt");
 
 
 	Event ev;
@@ -52,10 +60,26 @@ WorldMap::WorldMap(RenderWindow* hwnd)
 
 		coin.Drawing(hwnd, !shop);
 		CoinText.buttonDraw(hwnd, !shop);
-		for (auto i = 0; i < chains.size(); i++)
+		if (MyData.at(1) == 1)
 		{
-			chains.at(i).Drawing(hwnd, !shop);
+			ch1.Drawing(hwnd, !shop);
 		}
+		else if (MyData.at(1) == 2) {
+			ch1.Drawing(hwnd, !shop);
+			ch2.Drawing(hwnd, !shop);
+		}
+		else if (MyData.at(1) == 3) {
+			ch3.Drawing(hwnd, !shop);
+			ch2.Drawing(hwnd, !shop);
+			ch1.Drawing(hwnd, !shop);
+		}
+		else if (MyData.at(1) == 4) {
+			ch3.Drawing(hwnd, !shop);
+			ch4.Drawing(hwnd, !shop);
+			ch1.Drawing(hwnd, !shop);
+			ch2.Drawing(hwnd, !shop);
+		}
+
 		ShopIcon.Drawing(hwnd, !shop);
 
 		ShopBackround.Drawing(hwnd, shop);

@@ -1,6 +1,8 @@
 #include "Game.h"
 
 int main() {
+	LoadData data;
+	data.InitFiles();
 	Game game(1920, 1080, "Medival adventure" , true);
 	game.SceneManager();
 	return 0;
