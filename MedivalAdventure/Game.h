@@ -38,6 +38,19 @@ public:
 				WorldMap map(hwnd);
 				Scene = map.returnScene(); }
 				break;
+
+			case 3:
+				cout << "Level 1" << endl;
+				Scene = 1;
+				break;
+			case 4:
+				cout << "Level 2" << endl;
+			case 5:
+				cout << "Level 3" << endl;
+			case 6:
+				cout << "Level 4" << endl;
+			case 7:
+				cout << "Level 5" << endl;
 			}
 		}
 	}

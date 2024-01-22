@@ -10,8 +10,10 @@
 #include "btn.h"
 #include "StaticImage.h"
 #include "LoadData.h"
+#include <iostream>
 
 using namespace sf;
+using namespace std;
 
 class WorldMap
 {
@@ -31,6 +33,9 @@ private:
 	int money = 100;
 	vector<StaticImage> GuiItems;
 	vector<btn> GuiText;
+
+	vector<StaticImage> ShopItems;
+	vector<btn> Prices;
 
 	
 

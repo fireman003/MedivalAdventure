@@ -40,6 +40,16 @@ public:
 		return numbers;
 	}
 
+
+	void write_vector_to_file(const std::vector<double>& vec, const std::string& filename) {
+		std::ofstream file(filename);
+		for (const auto& num : vec) {
+			file << num << " ";
+		}
+
+		file.close();
+	}
+
 private:
 
 	bool is_file_exist(const char* fileName)
