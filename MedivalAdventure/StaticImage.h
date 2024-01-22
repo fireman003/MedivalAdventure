@@ -28,6 +28,10 @@ public:
 		return false;
 	}
 
+	void changeRect(int sizeX, int sizeY, int posX, int posY) {
+		sprite.setTextureRect(IntRect(Vector2i(posX, posY), Vector2i(sizeX, sizeY)));
+	}
+
 private:
 
 	Texture texture;

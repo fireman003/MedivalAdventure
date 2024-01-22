@@ -148,6 +148,7 @@
     <ClInclude Include="LoadData.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Music.h" />
+    <ClInclude Include="PopUpMenu.h" />
     <ClInclude Include="StaticImage.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="WorldMap.h" />

@@ -17,7 +17,7 @@ public:
 			ofstream ofile("assets/data.txt", 'r' | 'w');
 			ofile.close();
 			file.open("assets/data.txt", 'r' | 'w');
-			file << 100 << " " << 4;
+			file << 100 << " " << 4 << " " << 1 << " " << 2 << " " << 0 << " " << 0 << " " << 0;
 			file.close();
 		}
 	}

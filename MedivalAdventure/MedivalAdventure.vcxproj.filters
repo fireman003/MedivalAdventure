@@ -68,5 +68,8 @@
     <ClInclude Include="LoadData.h">
       <Filter>src\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="PopUpMenu.h">
+      <Filter>src\Utils</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

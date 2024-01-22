@@ -29,6 +29,8 @@ private:
 	vector<double> MyData;
 
 	int money = 100;
+	vector<StaticImage> GuiItems;
+	vector<btn> GuiText;
 
 	
 
