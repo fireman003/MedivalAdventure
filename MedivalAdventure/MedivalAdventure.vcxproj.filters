@@ -42,6 +42,12 @@
     <ClCompile Include="LoadData.cpp">
       <Filter>src\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="Level_one.cpp">
+      <Filter>src\scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="ARMY.cpp">
+      <Filter>src\GamePlay</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -70,6 +76,12 @@
     </ClInclude>
     <ClInclude Include="PopUpMenu.h">
       <Filter>src\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Level_one.h">
+      <Filter>src\scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="ARMY.h">
+      <Filter>src\GamePlay</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -26,6 +26,8 @@ WorldMap::WorldMap(RenderWindow* hwnd)
 	LoadData data; // money - level count - archer - knight - horse - ship - wizard
 	MyData = data.readNumbersFromFile("assets/data.txt");
 	
+	money = MyData.at(0);
+
 	btn CoinText(Vector2f(1800, 55), Color::White, std::to_string(static_cast<int>(MyData.at(0))), Color::White, 25, 1);
 
 	for (int i = 2; i <= 6; i++) {

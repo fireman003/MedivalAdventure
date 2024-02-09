@@ -133,8 +133,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ARMY.cpp" />
     <ClCompile Include="btn.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Level_one.cpp" />
     <ClCompile Include="LoadData.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenu.cpp" />
@@ -143,8 +145,10 @@
     <ClCompile Include="WorldMap.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ARMY.h" />
     <ClInclude Include="btn.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Level_one.h" />
     <ClInclude Include="LoadData.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Music.h" />
